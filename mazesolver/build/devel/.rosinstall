@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/omer/ros_workspace/sandbox/mazesolver/build/devel/setup.sh

@@ -1,0 +1,22 @@
+<launch>
+    <!-- gazebo !-->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(find mazesolver)/worlds/crazy_maze.world" />
+        <arg name="paused" value="false" />
+        <arg name="use_sim_time" value="true" />
+        <arg name="gui" value="true" />
+        <arg name="headless" value="false" />
+        <arg name="debug" value="false" />
+    
+    </include>
+
+    <include file="$(find mazesolver)/launch/pioneer3dx.gazebo.launch">
+        <arg name="robot_name" value="p3dx" />
+        <arg name="robot_position" value="-x 0.0 -y 0.0 -z 0.01 -R 0 -P 0 -Y +1.57" />
+    </include>
+    
+    <node pkg="tf" type="static_transform_publisher" name="base_to_odom_p3dx"
+        args="0.0 0.0 0.0 0.0 0.0 0.0 base_link p3dx/odom 200" />
+
+
+</launch>

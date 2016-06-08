@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC -O2 -g -DNDEBUG   -shared -Wl,-soname,libgtest.so -o /home/omer/ros_workspace/sandbox/mazesolver/lib/libgtest.so CMakeFiles/gtest.dir/src/gtest-all.cc.o  -L/home/omer/ros_workspace/sandbox/mazesolver/build/gtest/src -lpthread -Wl,-rpath,/home/omer/ros_workspace/sandbox/mazesolver/build/gtest/src 
